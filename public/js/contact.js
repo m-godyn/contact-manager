@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.reset();
             } else {
                 alertBox.className = 'alert alert-danger';
-                alertBox.textContent = data.message || 'Wystąpił błąd';
+                alertBox.textContent = data.message || 'An error occurred';
                 alertBox.classList.remove('d-none');
             }
         } catch (error) {
             alertBox.className = 'alert alert-danger';
-            alertBox.textContent = 'Wystąpił błąd podczas wysyłania formularza';
+            alertBox.textContent = 'An error occurred while submitting the form';
             alertBox.classList.remove('d-none');
         }
     });

@@ -12,7 +12,7 @@ function errorHandler(err, req, res, next) {
         res.status(status).render('error', {
             message,
             status,
-            title: `${status} - Błąd`
+            title: `${status} - Error`
         });
     }
 }

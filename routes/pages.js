@@ -7,15 +7,15 @@ const router = express.Router();
 
 // static pages
 router.get('/', (req, res) => {
-    res.render('index', { title: 'Strona główna' });
+    res.render('index', { title: 'Home' });
 });
 
 router.get('/about', (req, res) => {
-    res.render('about', { title: 'O nas' });
+    res.render('about', { title: 'About Us' });
 });
 
 router.get('/api/hello', (req, res) => {
-    res.json({ message: 'Witaj z backendu Express!' });
+    res.json({ message: 'Hello from Express backend!' });
 });
 
 // form handling
@@ -39,13 +39,13 @@ router.post(
             await saveContact({ name, email });
             res.json({
                 success: true,
-                message: `Dziękujemy, ${name}. Odezwiemy się na ${email}.`
+                message: `Thank you, ${name}. We'll contact you at ${email}.`
             });
         } catch (error) {
-            console.error('Błąd podczas zapisywania danych:', error);
+            console.error('Error while saving contact:', error);
             res.status(500).json({
                 success: false,
-                errors: ['Wystąpił błąd przy zapisie kontaktu.']
+                errors: ['An error occurred while saving the contact.']
             });
         }
 });

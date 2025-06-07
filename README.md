@@ -7,15 +7,13 @@ Built a learning project with backend-first principles.
 
 ## 🚀 Features
 
-- Contact form with name and email submission
-- MongoDB storage via Mongoose
-- RESTful route structure
-- Dockerized local development environment
-- Mongo Express for quick database viewing
-- EJS templating engine
-- Backend validation using `express-validator`
-- Global error handling middleware
-- Early-stage testing with `jest` and `supertest`
+- 📬 Contact form with backend validation
+- 🧰 Admin panel with login and session management
+- 🔐 Password hashing using bcrypt
+- ✅ Input validation with express-validator
+- 🧪 Ready for unit & integration testing (Jest)
+- 🧹 Custom middleware for error handling and route protection
+- 🌍 Internationalization support (i18n planned: English, Polish, Danish, German)
 
 ## 🛠️ Getting Started
 
