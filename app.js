@@ -16,5 +16,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 app.listen(PORT, () => {
-    console.log(`Aplikacja działa na http://localhost:${PORT}`);
+    console.log(`Application running on http://localhost:${PORT}`);
 });
