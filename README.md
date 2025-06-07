@@ -8,7 +8,7 @@ Built a learning project with backend-first principles.
 ## 🚀 Features
 
 - 📬 Contact form with backend validation
-- 🧰 Admin panel with login and session management
+- 🧰 Admin panel with login and session management, as well contact management
 - 🔐 Password hashing using bcrypt
 - ✅ Input validation with express-validator
 - 🧪 Ready for unit & integration testing (Jest)
