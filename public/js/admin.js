@@ -50,13 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 body: JSON.stringify(data)
             });
 
             const result = await response.json();
 
-            if (result.success) {
+            if (response.ok) {
                 window.location.reload();
             } else {
                 showAlert(result.message);

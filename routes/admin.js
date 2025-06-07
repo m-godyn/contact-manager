@@ -44,23 +44,17 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({
                 success: false,
-                errors: errors.array(),
+                message: errors.array()[0].msg
             });
         }
         const { name, email } = req.body;
         
         const result = await updateContact(req.params.id, { name, email });
         if (!result.success) {
-            if (req.xhr || req.headers.accept.includes('application/json')) {
-                return res.status(400).json(result);
-            }
-            return res.status(400).send(result.message);
+            return res.status(400).json(result);
         }
 
-        if (req.xhr || req.headers.accept.includes('application/json')) {
-            return res.json(result);
-        }
-        res.redirect('/admin');
+        return res.json(result);
     }
 );
 
