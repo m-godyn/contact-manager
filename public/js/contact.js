@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await res.json();
 
-            if (data.status === 'success') {
+            if (data.success === true) {
                 alertBox.className = 'alert alert-success';
                 alertBox.textContent = data.message;
                 alertBox.classList.remove('d-none');

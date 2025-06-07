@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const { saveContact } = require('../utils/contactController');
+const { saveContact } = require('../controllers/contactController');
+const { body, validationResult } = require('express-validator');
 
 const router = express.Router();
 
@@ -18,23 +19,35 @@ router.get('/api/hello', (req, res) => {
 });
 
 // form handling
-router.post('/contact', async (req, res) => {
-    const { name, email } = req.body;
+router.post(
+    '/contact', 
+    [
+        body('name').notEmpty().withMessage('Name is required'),
+        body('email').isEmail().withMessage('Valid email is required'),
+    ],
+    async (req, res, next) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({
+                success: false,
+                errors: errors.array(),
+            });
+        }
+        const { name, email } = req.body;
 
-    try {
-        await saveContact({ name, email });
-
-        res.json({
-            status: 'success', 
-            message: `Dziękujemy, ${name}. Odezwiemy się na ${email}.`,
-        });
-    } catch (error) {
-        console.error('Błąd podczas zapisywania danych:', error);
-        res.status(500).json({
-            status: 'error',
-            message: 'Wystąpił błąd przy zapisie kontaktu.' 
-        });
-    }
+        try {
+            await saveContact({ name, email });
+            res.json({
+                success: true,
+                message: `Dziękujemy, ${name}. Odezwiemy się na ${email}.`
+            });
+        } catch (error) {
+            console.error('Błąd podczas zapisywania danych:', error);
+            res.status(500).json({
+                success: false,
+                errors: ['Wystąpił błąd przy zapisie kontaktu.']
+            });
+        }
 });
 
 module.exports = router;

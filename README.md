@@ -1,6 +1,9 @@
 # Contact Manager
 
-A simple Node.js + Express app for collecting and managing contact form submissions. Built using EJS, MongoDB, and a minimal frontend.
+A simple Node.js + Express app for collecting and managing contact form submissions. Built using EJS, MongoDB, and a minimal frontend with Bootstrap.
+
+Built a learning project with backend-first principles.
+
 
 ## 🚀 Features
 
@@ -58,8 +61,12 @@ docker-compose down
 ### Start the App
 
 ```bash
-node app.js
+npm run dev
 ```
+> App should be running at http://localhost:3000
 
-## 🙌 Credits
-Built by @m-godyn as a learning and portfolio project with backend-first principles.
+## 🧪 Running Tests
+
+```bash
+npm test
+```
