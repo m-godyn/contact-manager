@@ -33,9 +33,9 @@ app.use(authRoutes);
 app.use((req, res, next) => {
     if (!res.headersSent) {
         res.status(404).render('error', {
-            message: 'Nie znaleziono takiej strony',
+            message: 'Page not found',
             status: 404,
-            title: '404 - Strona nie znaleziona'
+            title: 'Page not found'
         });
     } else {
         next();
