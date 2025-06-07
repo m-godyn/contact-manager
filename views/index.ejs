@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body text-center">
+                        <h1 class="card-title mb-4">Witaj w ExpressJS!</h1>
+                        <p class="card-text lead">To jest banalna aplikacja demonstracyjna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Kontakt</h2>
+
+                        <div id="alert-box" class="alert d-none" role="alert"></div>
+
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Imię</label>
+                                <input type="text" class="form-control" name="name" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Wyślij</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/contact.js"></script>
+
+    <%- include('partials/footer') %>
