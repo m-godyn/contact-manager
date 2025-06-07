@@ -13,6 +13,7 @@ Built a learning project with backend-first principles.
 - ✅ Input validation with express-validator
 - 🧪 Ready for unit & integration testing (Jest)
 - 🧹 Custom middleware for error handling and route protection
+- 🌓 Light/dark theme with persistent user preference
 - 🌍 Internationalization support (i18n planned: English, Polish, Danish, German)
 
 ## 🛠️ Getting Started
