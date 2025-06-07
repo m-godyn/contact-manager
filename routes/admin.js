@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const Contact = require('../models/contact');
+const { updateContact } = require('../controllers/contactController');
 const requireLogin = require('../middlewares/auth');
 
 router.get('/admin', requireLogin, async (req, res) => {
@@ -27,6 +28,7 @@ router.get('/admin/edit/:id', async (req, res) => {
         }
         res.json(contact);
     } catch (error) {
+        console.error('Error loading contact:', error);
         res.status(500).json({ error: 'Error loading contact data' });
     }
 });
@@ -46,18 +48,19 @@ router.post(
             });
         }
         const { name, email } = req.body;
-        try {
-            const contact = await Contact.findByIdAndUpdate(req.params.id, { name, email });
+        
+        const result = await updateContact(req.params.id, { name, email });
+        if (!result.success) {
             if (req.xhr || req.headers.accept.includes('application/json')) {
-                return res.json({ success: true, contact });
+                return res.status(400).json(result);
             }
-            res.redirect('/admin');
-        } catch (error) {
-            if (req.xhr || req.headers.accept.includes('application/json')) {
-                return res.status(500).json({ error: 'Error updating contact' });
-            }
-            res.status(500).send('Error updating contact');
+            return res.status(400).send(result.message);
         }
+
+        if (req.xhr || req.headers.accept.includes('application/json')) {
+            return res.json(result);
+        }
+        res.redirect('/admin');
     }
 );
 

@@ -35,19 +35,16 @@ router.post(
         }
         const { name, email } = req.body;
 
-        try {
-            await saveContact({ name, email });
-            res.json({
-                success: true,
-                message: `Thank you, ${name}. We'll contact you at ${email}.`
-            });
-        } catch (error) {
-            console.error('Error while saving contact:', error);
-            res.status(500).json({
-                success: false,
-                errors: ['An error occurred while saving the contact.']
-            });
+        const result = await saveContact({ name, email });
+        if (!result.success) {
+            return res.status(400).json(result);
         }
-});
+
+        res.json({
+            success: true,
+            message: `Thank you, ${name}. We'll contact you at ${email}.`
+        });
+    }
+);
 
 module.exports = router;
