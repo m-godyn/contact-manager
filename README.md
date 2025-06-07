@@ -40,6 +40,9 @@ Create a .env file in the project root with the following content:
 ```env
 MONGO_URI=mongodb://localhost:27017/contact-manager
 PORT=3000
+SESSION_SECRET={secret you want}
+INITIAL_ADMIN_USERNAME={username you want}
+INITIAL_ADMIN_PASSWORD={password you want}
 ```
 > You can change the database name (`contact-manager`) if desired.
 
