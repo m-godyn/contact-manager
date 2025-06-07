@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const routes = require('./routes/pages');
 const { connectDB } = require('./db');
+const errorHandler = require('./middlewares/errorHandler');
 require('dotenv').config();
 
 const app = express();
@@ -14,6 +15,20 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
+
+app.use((req, res, next) => {
+    if (!res.headersSent) {
+        res.status(404).render('error', {
+            message: 'Nie znaleziono takiej strony',
+            status: 404,
+            title: '404 - Strona nie znaleziona'
+        });
+    } else {
+        next();
+    }
+});
+
+app.use(errorHandler);
 
 app.listen(PORT, () => {
     console.log(`Application running on http://localhost:${PORT}`);
