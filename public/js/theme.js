@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (theme === 'light') {
             icon.className = 'bi bi-sun-fill me-2';
-            text.textContent = 'Light';
+            text.textContent = themeToggle.dataset.lightText;
         } else {
             icon.className = 'bi bi-moon-fill me-2';
-            text.textContent = 'Dark';
+            text.textContent = themeToggle.dataset.darkText;
         }
     }
 }); 
