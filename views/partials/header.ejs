@@ -51,9 +51,11 @@
                                     <span class="flag-icon flag-icon-gb"></span>
                                     <% } else if (getLocale()==='dk' ) { %>
                                         <span class="flag-icon flag-icon-dk"></span>
-                                        <% } else { %>
-                                            <span class="flag-icon flag-icon-gb"></span>
-                                            <% } %>
+                                        <% } else if (getLocale()==='de' ) { %>
+                                            <span class="flag-icon flag-icon-de"></span>
+                                            <% } else { %>
+                                                <span class="flag-icon flag-icon-gb"></span>
+                                                <% } %>
                         </span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
@@ -73,6 +75,12 @@
                             <a class="dropdown-item <%= getLocale() === 'dk' ? 'active' : '' %>" href="/lang/dk">
                                 <span class="flag-icon flag-icon-dk me-2"></span>
                                 Dansk
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item <%= getLocale() === 'de' ? 'active' : '' %>" href="/lang/de">
+                                <span class="flag-icon flag-icon-de me-2"></span>
+                                Deutsch
                             </a>
                         </li>
                     </ul>

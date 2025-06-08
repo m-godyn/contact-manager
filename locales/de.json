@@ -1,0 +1,80 @@
+{
+    "common": {
+        "appName": "Kontakt Manager",
+        "theme": {
+            "light": "Hell",
+            "dark": "Dunkel",
+            "toggle": "Thema"
+        },
+        "navigation": {
+            "home": "Startseite",
+            "about": "Über uns",
+            "adminPanel": "Admin-Bereich"
+        },
+        "buttons": {
+            "send": "Senden",
+            "close": "Schließen",
+            "save": "Änderungen speichern",
+            "back": "Zurück zur Startseite",
+            "logout": "Abmelden"
+        },
+        "form": {
+            "name": "Name",
+            "email": "E-Mail",
+            "username": "Benutzername",
+            "password": "Passwort"
+        },
+        "alerts": {
+            "error": "Ein Fehler ist aufgetreten",
+            "unexpectedError": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+        }
+    },
+    "home": {
+        "welcome": {
+            "title": "Willkommen beim Kontakt Manager!",
+            "description": "Eine moderne und effiziente Möglichkeit, Ihre Kontakte zu verwalten. Behalten Sie Ihre wichtigen Verbindungen an einem Ort im Überblick."
+        },
+        "contact": {
+            "title": "Kontaktieren Sie uns",
+            "success": "Vielen Dank, {{name}}. Wir werden Sie unter {{email}} kontaktieren."
+        }
+    },
+    "about": {
+        "title": "Über uns",
+        "description": "Kontakt Manager ist eine leichte und sichere Webanwendung zur Verwaltung von Kontaktanfragen. Ursprünglich als Lernprojekt mit Fokus auf saubere Backend-Architektur entwickelt, hat sich die App zu einer wiederverwendbaren Vorlage für Formulare im kleinen Maßstab mit Admin-Zugang entwickelt.",
+        "techStack": "Dieses Projekt wurde mit Node.js, Express, MongoDB und EJS entwickelt, wobei Einfachheit, Transparenz und Entwicklerfreundlichkeit im Vordergrund stehen.",
+        "openSource": "Fühlen Sie sich frei, es zu nutzen oder beizutragen – dieses Projekt ist Open-Source und wurde mit ❤️ von Entwicklern erstellt, denen sauberer, wartbarer Code am Herzen liegt.",
+        "credits": "Entwickelt von Miłosz G. und ChatGPT als Teil einer praktischen Lern- und Fullstack-Entwicklungsreise."
+    },
+    "login": {
+        "title": "Melden Sie sich in Ihrem Admin-Konto an",
+        "button": "Anmelden",
+        "logoutMessage": "Sie wurden abgemeldet"
+    },
+    "admin": {
+        "title": "Admin-Bereich",
+        "table": {
+            "name": "Name",
+            "email": "E-Mail",
+            "actions": "Aktionen"
+        },
+        "actions": {
+            "edit": "Bearbeiten",
+            "delete": "Löschen"
+        },
+        "editContact": {
+            "title": "Kontakt bearbeiten",
+            "success": "Kontakt erfolgreich aktualisiert"
+        },
+        "deleteConfirm": "Sind Sie sicher?"
+    },
+    "error": {
+        "title": "{{status}} - Fehler",
+        "notFound": "Seite nicht gefunden",
+        "default": "Etwas ist schiefgelaufen"
+    },
+    "validation": {
+        "nameRequired": "Name ist erforderlich",
+        "emailRequired": "Gültige E-Mail-Adresse ist erforderlich"
+    }
+} 
