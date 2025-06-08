@@ -47,6 +47,12 @@ app.use(authRoutes);
 app.use(adminRoutes);
 
 app.use((req, res, next) => {
+    const currentLang = req.cookies.lang || 'en';
+    res.locals.currentLang = currentLang;
+    next();
+});
+
+app.use((req, res, next) => {
     if (!res.headersSent) {
         res.status(404).render('error', {
             message: __("error.notFound"),

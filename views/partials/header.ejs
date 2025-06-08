@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/flags.css">
 </head>
 
 <body>
@@ -40,8 +41,37 @@
                         </a>
                     </li>
                 </ul>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="currentLang">
+                            <% if (getLocale()==='pl' ) { %>
+                                <span class="flag-icon flag-icon-pl"></span>
+                                <% } else if (getLocale()==='en' ) { %>
+                                    <span class="flag-icon flag-icon-gb"></span>
+                                    <% } else { %>
+                                        <span class="flag-icon flag-icon-gb"></span>
+                                        <% } %>
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li>
+                            <a class="dropdown-item <%= getLocale() === 'en' ? 'active' : '' %>" href="/lang/en">
+                                <span class="flag-icon flag-icon-gb me-2"></span>
+                                English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item <%= getLocale() === 'pl' ? 'active' : '' %>" href="/lang/pl">
+                                <span class="flag-icon flag-icon-pl me-2"></span>
+                                Polski
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="d-flex align-items-center gap-3">
-                    <div class="theme-toggle d-flex align-items-center" id="themeToggle">
+                    <div class="theme-toggle d-flex align-items-center btn btn-outline-light py-2" id="themeToggle"
+                        style="border-color: white; color: white !important;">
                         <i class="bi bi-sun-fill me-2"></i>
                         <span>
                             <%= __("common.theme.toggle") %>
@@ -51,9 +81,4 @@
             </div>
         </div>
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/theme.js"></script>
-</body>
-
-</html>

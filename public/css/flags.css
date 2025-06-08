@@ -1,0 +1,16 @@
+.flag-icon {
+   width: 16px;
+   height: 12px;
+   display: inline-block;
+   margin-right: 0.5rem;
+ }
+  
+ .flag-icon-gb:before { content: "🇬🇧"; }
+ .flag-icon-pl:before { content: "🇵🇱"; }
+ .flag-icon-dk:before { content: "🇩🇰"; }
+ .flag-icon-de:before { content: "🇩🇪"; }
+  
+ .dropdown-item.active {
+    background-color: var(--bs-primary);
+    color: white;
+  }
