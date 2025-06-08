@@ -23,6 +23,7 @@ i18n.configure({
 });
 
 const app = express();
+app.set('trust proxy', 1); // Trust first proxy (needed for rate limiting to work with X-Forwarded-For)
 const PORT = process.env.PORT || 3000;
 connectDB();
 

@@ -71,7 +71,8 @@
     "error": {
         "title": "{{status}} - Error",
         "notFound": "Page not found",
-        "default": "Something went wrong"
+        "default": "Something went wrong",
+        "rateLimit": "Too many requests from this IP, please try again after a minute"
     },
     "validation": {
         "nameRequired": "Name is required",

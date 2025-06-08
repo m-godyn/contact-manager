@@ -2,8 +2,23 @@ const express = require('express');
 const path = require('path');
 const { saveContact } = require('../controllers/contactController');
 const { body, validationResult } = require('express-validator');
+const rateLimit = require('express-rate-limit');
 
 const router = express.Router();
+
+// Configure rate limiter for contact route
+const contactLimiter = rateLimit({
+    windowMs: 60 * 1000, // 1 minute
+    max: 3, // limit each IP to 3 requests per windowMs
+    message: 'Too many requests from this IP, please try again after a minute',
+    standardHeaders: true,
+    legacyHeaders: false,
+    handler: (req, res) => {
+        res.status(429).json({
+            message: req.__('error.rateLimit')
+        });
+    }
+});
 
 // static pages
 router.get('/', (req, res) => {
@@ -21,6 +36,7 @@ router.get('/api/hello', (req, res) => {
 // form handling
 router.post(
     '/contact', 
+    contactLimiter,
     [
         body('name').notEmpty().withMessage('Name is required'),
         body('email').isEmail().withMessage('Valid email is required'),

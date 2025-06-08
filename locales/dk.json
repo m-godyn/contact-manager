@@ -71,7 +71,8 @@
     "error": {
         "title": "{{status}} - Fejl",
         "notFound": "Siden blev ikke fundet",
-        "default": "Noget gik galt"
+        "default": "Noget gik galt",
+        "rateLimit": "For mange anmodninger fra denne IP, prøv igen om et minut"
     },
     "validation": {
         "nameRequired": "Navn er påkrævet",

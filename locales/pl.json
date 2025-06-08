@@ -71,7 +71,8 @@
 	"error": {
 		"title": "{{status}} - Błąd",
 		"notFound": "Strona nie znaleziona",
-		"default": "Coś poszło nie tak"
+		"default": "Coś poszło nie tak",
+		"rateLimit": "Zbyt wiele żądań z tego adresu IP, spróbuj ponownie za minutę"
 	},
 	"validation": {
 		"nameRequired": "Imię i nazwisko jest wymagane",

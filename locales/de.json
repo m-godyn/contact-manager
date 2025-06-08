@@ -71,7 +71,8 @@
     "error": {
         "title": "{{status}} - Fehler",
         "notFound": "Seite nicht gefunden",
-        "default": "Etwas ist schiefgelaufen"
+        "default": "Etwas ist schiefgelaufen",
+        "rateLimit": "Zu viele Anfragen von dieser IP, bitte versuchen Sie es in einer Minute erneut"
     },
     "validation": {
         "nameRequired": "Name ist erforderlich",
