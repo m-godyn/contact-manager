@@ -13,7 +13,7 @@ const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 i18n.configure({
-    locales: ['en', 'pl'],
+    locales: ['en', 'pl', 'dk'],
     defaultLocale: 'en',
     directory: path.join(__dirname, 'locales'),
     cookie: 'lang',

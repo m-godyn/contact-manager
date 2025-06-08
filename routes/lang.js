@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/lang/:locale', (req, res) => {
     const locale = req.params.locale;
     
-    if (['en', 'pl'].includes(locale)) {
+    if (['en', 'pl', 'dk'].includes(locale)) {
         res.cookie('lang', locale, { 
             maxAge: 900000, 
             httpOnly: true,

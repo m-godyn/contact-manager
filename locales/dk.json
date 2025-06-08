@@ -1,0 +1,80 @@
+{
+    "common": {
+        "appName": "Kontakt Manager",
+        "theme": {
+            "light": "Lys",
+            "dark": "Mørk",
+            "toggle": "Tema"
+        },
+        "navigation": {
+            "home": "Hjem",
+            "about": "Om os",
+            "adminPanel": "Admin Panel"
+        },
+        "buttons": {
+            "send": "Send",
+            "close": "Luk",
+            "save": "Gem ændringer",
+            "back": "Tilbage til Hjem",
+            "logout": "Log ud"
+        },
+        "form": {
+            "name": "Navn",
+            "email": "E-mail",
+            "username": "Brugernavn",
+            "password": "Adgangskode"
+        },
+        "alerts": {
+            "error": "Der opstod en fejl",
+            "unexpectedError": "Der opstod en uventet fejl. Prøv venligst igen."
+        }
+    },
+    "home": {
+        "welcome": {
+            "title": "Velkommen til Kontakt Manager!",
+            "description": "En moderne og effektiv måde at administrere dine kontakter. Hold styr på dine vigtige forbindelser ét sted."
+        },
+        "contact": {
+            "title": "Kontakt os",
+            "success": "Tak, {{name}}. Vi kontakter dig på {{email}}."
+        }
+    },
+    "about": {
+        "title": "Om os",
+        "description": "Kontakt Manager er en let og sikker webapplikation designet til at håndtere kontaktindsendelser. Oprindeligt udviklet som et læringsprojekt med fokus på ren backend-arkitektur, er appen vokset til en genbrugelig skabelon til småskala formularer med admin-adgang.",
+        "techStack": "Dette projekt er bygget med Node.js, Express, MongoDB og EJS, med fokus på enkelhed, gennemsigtighed og udviklervenlighed.",
+        "openSource": "Du er velkommen til at bruge eller bidrage – dette projekt er open-source og lavet med ❤️ af udviklere, der går op i ren, vedligeholdbar kode.",
+        "credits": "Udviklet af Miłosz G. og ChatGPT som del af en praktisk lærings- og fullstack udviklingsrejse."
+    },
+    "login": {
+        "title": "Log ind på din admin-konto",
+        "button": "Log ind",
+        "logoutMessage": "Du er blevet logget ud"
+    },
+    "admin": {
+        "title": "Admin Panel",
+        "table": {
+            "name": "Navn",
+            "email": "E-mail",
+            "actions": "Handlinger"
+        },
+        "actions": {
+            "edit": "Rediger",
+            "delete": "Slet"
+        },
+        "editContact": {
+            "title": "Rediger kontakt",
+            "success": "Kontakt opdateret med succes"
+        },
+        "deleteConfirm": "Er du sikker?"
+    },
+    "error": {
+        "title": "{{status}} - Fejl",
+        "notFound": "Siden blev ikke fundet",
+        "default": "Noget gik galt"
+    },
+    "validation": {
+        "nameRequired": "Navn er påkrævet",
+        "emailRequired": "Gyldig e-mail er påkrævet"
+    }
+} 
