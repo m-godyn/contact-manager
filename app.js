@@ -70,7 +70,7 @@ app.use(errorHandler);
 if (require.main === module) {
     app.listen(PORT, () => {
         createAdminIfNotExists(process.env.INITIAL_ADMIN_USERNAME, process.env.INITIAL_ADMIN_PASSWORD);
-        console.log(`Application running on http://localhost:${PORT}`);
+        console.log(`🚀 Application running on http://localhost:${PORT}`);
     });
 }
 

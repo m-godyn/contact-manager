@@ -1,5 +1,5 @@
 function errorHandler(err, req, res, next) {
-    console.error(err.stack);
+    console.error('🔥 Error:', err.stack);
 
     const status = res.statusCode || 500;
     const message = err.message || 'Something went wrong';

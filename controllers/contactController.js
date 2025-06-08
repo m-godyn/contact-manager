@@ -4,11 +4,13 @@ async function saveContact({ name, email }) {
     try {
         const newContact = new Contact({ name, email });
         await newContact.save();
+        console.log(`📝 New contact saved: ${name} (${email})`);
         return { success: true, contact: newContact };
     } catch (error) {
-        console.error('Error saving contact:', error);
+        console.error('❌ Error saving contact:', error);
         
         if (error.code === 11000) {
+            console.log(`⚠️ Duplicate email attempt: ${email}`);
             return { 
                 success: false, 
                 message: 'This email is already registered in our system.' 
