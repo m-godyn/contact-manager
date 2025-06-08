@@ -1,38 +1,38 @@
 const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
-const Contact = require('../models/contact');
-const { updateContact } = require('../controllers/contactController');
+const { 
+    getAllContacts, 
+    getContactById, 
+    updateContact, 
+    deleteContact 
+} = require('../controllers/contactController');
 const requireLogin = require('../middlewares/auth');
 
 router.use(requireLogin);
 
 router.get('/admin', async (req, res) => {
-    const contacts = await Contact.find({}).sort({ createdAt: -1 });
-    res.render('admin', { title: 'Admin Panel', contacts });
+    const result = await getAllContacts();
+    if (!result.success) {
+        return res.status(500).send('Error loading contacts');
+    }
+    res.render('admin', { title: 'Admin Panel', contacts: result.contacts });
 });
 
 router.get('/admin/delete/:id', async (req, res) => {
-    try {
-        await Contact.findByIdAndDelete(req.params.id);
-        res.redirect('/admin');
-    } catch (error) {
-        console.error('Error deleting contact:', error);
-        res.status(500).send('Error deleting contact');
+    const result = await deleteContact(req.params.id);
+    if (!result.success) {
+        return res.status(500).send(result.message || 'Error deleting contact');
     }
+    res.redirect('/admin');
 });
 
 router.get('/admin/edit/:id', async (req, res) => {
-    try {
-        const contact = await Contact.findById(req.params.id);
-        if (!contact) {
-            return res.status(404).json({ error: 'Contact not found' });
-        }
-        res.json(contact);
-    } catch (error) {
-        console.error('Error loading contact:', error);
-        res.status(500).json({ error: 'Error loading contact data' });
+    const result = await getContactById(req.params.id);
+    if (!result.success) {
+        return res.status(404).json({ error: result.message });
     }
+    res.json(result.contact);
 });
 
 router.post(

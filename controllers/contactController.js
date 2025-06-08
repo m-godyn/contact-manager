@@ -57,4 +57,61 @@ async function updateContact(id, { name, email }) {
     }
 }
 
-module.exports = { saveContact, updateContact };
+async function getAllContacts() {
+    try {
+        const contacts = await Contact.find({}).sort({ createdAt: -1 });
+        return { success: true, contacts };
+    } catch (error) {
+        console.error('Error fetching contacts:', error);
+        return { 
+            success: false, 
+            message: 'An error occurred while fetching contacts.' 
+        };
+    }
+}
+
+async function getContactById(id) {
+    try {
+        const contact = await Contact.findById(id);
+        if (!contact) {
+            return { 
+                success: false, 
+                message: 'Contact not found' 
+            };
+        }
+        return { success: true, contact };
+    } catch (error) {
+        console.error('Error fetching contact:', error);
+        return { 
+            success: false, 
+            message: 'An error occurred while fetching the contact.' 
+        };
+    }
+}
+
+async function deleteContact(id) {
+    try {
+        const contact = await Contact.findByIdAndDelete(id);
+        if (!contact) {
+            return { 
+                success: false, 
+                message: 'Contact not found' 
+            };
+        }
+        return { success: true };
+    } catch (error) {
+        console.error('Error deleting contact:', error);
+        return { 
+            success: false, 
+            message: 'An error occurred while deleting the contact.' 
+        };
+    }
+}
+
+module.exports = { 
+    saveContact, 
+    updateContact, 
+    getAllContacts, 
+    getContactById, 
+    deleteContact 
+};
