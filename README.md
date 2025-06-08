@@ -7,14 +7,15 @@ Built a learning project with backend-first principles.
 
 ## 🚀 Features
 
-- 📬 Contact form with backend validation
-- 🧰 Admin panel with login and session management, as well contact management
-- 🔐 Password hashing using bcrypt
-- ✅ Input validation with express-validator
-- 🧪 Ready for unit & integration testing (Jest)
-- 🧹 Custom middleware for error handling and route protection
-- 🌓 Light/dark theme with persistent user preference
-- 🌍 Internationalization support (i18n planned: English, Polish, Danish, German)
+- 📬 Contact Form – with backend validation and error handling
+- 🧰 Admin Panel – for managing contacts and secured access for admins
+- 🔐 Authentication – secure login with password hashing (bcrypt) and session management
+- ✅ Validation – robust user input checks with express-validator
+- 🧪 Test-Ready – foundation for unit and integration tests using Jest
+- 🧹 Error Handling – custom middleware for catching and formatting server-side errors
+- 🚫 Route Protection – middleware to guard admin routes
+- 🌓 Theme Toggle – light/dark theme support with persistent user preferences
+- 🌍 Internationalization (i18n) – planned support for English, Polish, Danish, and German
 
 ## 🛠️ Getting Started
 
