@@ -27,8 +27,8 @@ app.use(session({
 }));
 
 app.use(routes);
-app.use(adminRoutes);
 app.use(authRoutes);
+app.use(adminRoutes);
 
 app.use((req, res, next) => {
     if (!res.headersSent) {
