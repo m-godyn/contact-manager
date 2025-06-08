@@ -1,0 +1,80 @@
+{
+    "common": {
+        "appName": "Contact Manager",
+        "theme": {
+            "light": "Light",
+            "dark": "Dark",
+            "toggle": "Theme"
+        },
+        "navigation": {
+            "home": "Home",
+            "about": "About",
+            "adminPanel": "Admin Panel"
+        },
+        "buttons": {
+            "send": "Send",
+            "close": "Close",
+            "save": "Save changes",
+            "back": "Back to Home",
+            "logout": "Logout"
+        },
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "username": "Username",
+            "password": "Password"
+        },
+        "alerts": {
+            "error": "An error occurred",
+            "unexpectedError": "An unexpected error occurred. Please try again."
+        }
+    },
+    "home": {
+        "welcome": {
+            "title": "Welcome to Contact Manager!",
+            "description": "A modern and efficient way to manage your contacts. Keep track of your important connections in one place."
+        },
+        "contact": {
+            "title": "Contact Us",
+            "success": "Thank you, {{name}}. We'll contact you at {{email}}."
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "description": "Contact Manager is a lightweight and secure web application designed for handling contact submissions. Originally developed as a learning project with a focus on clean backend architecture, the app has grown into a reusable boilerplate for small-scale forms with admin access.",
+        "techStack": "This project is built using Node.js, Express, MongoDB, and EJS, with simplicity, transparency, and developer-friendliness in mind.",
+        "openSource": "Feel free to use or contribute – this project is open-source and made with ❤️ by developers who care about clean, maintainable code.",
+        "credits": "Developed by Miłosz G. and ChatGPT as part of a hands-on learning & fullstack growth journey."
+    },
+    "login": {
+        "title": "Log in to your admin account",
+        "button": "Login",
+        "logoutMessage": "You have been logged out"
+    },
+    "admin": {
+        "title": "Admin Panel",
+        "table": {
+            "name": "Name",
+            "email": "Email",
+            "actions": "Actions"
+        },
+        "actions": {
+            "edit": "Edit",
+            "delete": "Delete"
+        },
+        "editContact": {
+            "title": "Edit Contact",
+            "success": "Contact updated successfully"
+        },
+        "deleteConfirm": "Are you sure?"
+    },
+    "error": {
+        "title": "{{status}} - Error",
+        "notFound": "Page not found",
+        "default": "Something went wrong"
+    },
+    "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Valid email is required"
+    }
+}

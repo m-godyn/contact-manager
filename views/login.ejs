@@ -5,7 +5,9 @@
             <div class="col-md-6">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h2 class="card-title text-center mb-4">Log in to your admin account</h2>
+                        <h2 class="card-title text-center mb-4">
+                            <%= __("login.title") %>
+                        </h2>
 
                         <% if (error) { %>
                             <div class="alert alert-danger" role="alert">
@@ -15,23 +17,29 @@
 
                                 <% if (logoutMessage) { %>
                                     <div class="alert alert-success" role="alert">
-                                        <%= logoutMessage %>
+                                        <%= __("login.logoutMessage") %>
                                     </div>
                                     <% } %>
 
                                         <form method="post" action="/login">
                                             <div class="mb-3">
-                                                <label for="username" class="form-label">Username</label>
+                                                <label for="username" class="form-label">
+                                                    <%= __("common.form.username") %>
+                                                </label>
                                                 <input type="text" class="form-control" id="username" name="username"
                                                     required>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="password" class="form-label">Password</label>
+                                                <label for="password" class="form-label">
+                                                    <%= __("common.form.password") %>
+                                                </label>
                                                 <input type="password" class="form-control" id="password"
                                                     name="password" required>
                                             </div>
                                             <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Login</button>
+                                                <button type="submit" class="btn btn-primary">
+                                                    <%= __("login.button") %>
+                                                </button>
                                             </div>
                                         </form>
                     </div>

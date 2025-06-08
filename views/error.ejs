@@ -4,12 +4,13 @@
             <div class="col-md-6">
                 <div class="card border-danger">
                     <div class="card-header bg-danger text-white text-center">
-                        <h2 class="mb-0">Error <%= status %>
+                        <h2 class="mb-0">
+                            <%= __("error.title", { status: status }) %>
                         </h2>
                     </div>
                     <div class="card-body text-center">
                         <p class="card-text fs-5">
-                            <%= message %>
+                            <%= message || __("error.default") %>
                         </p>
                     </div>
                 </div>

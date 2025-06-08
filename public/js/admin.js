@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const editButtons = document.querySelectorAll('.edit-btn');
+    const deleteButtons = document.querySelectorAll('.delete-btn');
     const editModal = new bootstrap.Modal(document.getElementById('editContactModal'));
     const editForm = document.getElementById('editContactForm');
     const saveButton = document.getElementById('saveContactBtn');
@@ -15,6 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideAlert() {
         alertBox.classList.add('d-none');
     }
+
+    // Handle delete confirmation
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const confirmMessage = button.dataset.confirm;
+            if (confirm(confirmMessage)) {
+                window.location.href = button.href;
+            }
+        });
+    });
 
     editButtons.forEach(button => {
         button.addEventListener('click', async () => {

@@ -1,0 +1,101 @@
+{
+	"common": {
+		"appName": "Menedżer Kontaktów",
+		"theme": {
+			"light": "Jasny",
+			"dark": "Ciemny",
+			"toggle": "Motyw"
+		},
+		"navigation": {
+			"home": "Strona główna",
+			"about": "O nas",
+			"adminPanel": "Panel administracyjny"
+		},
+		"buttons": {
+			"send": "Wyślij",
+			"close": "Zamknij",
+			"save": "Zapisz zmiany",
+			"back": "Powrót do strony głównej",
+			"logout": "Wyloguj"
+		},
+		"form": {
+			"name": "Imię i nazwisko",
+			"email": "Email",
+			"username": "Nazwa użytkownika",
+			"password": "Hasło"
+		},
+		"alerts": {
+			"error": "Wystąpił błąd",
+			"unexpectedError": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie."
+		}
+	},
+	"home": {
+		"welcome": {
+			"title": "Witaj w Menedżerze Kontaktów!",
+			"description": "Nowoczesny i efektywny sposób zarządzania kontaktami. Trzymaj wszystkie ważne połączenia w jednym miejscu."
+		},
+		"contact": {
+			"title": "Kontakt",
+			"success": "Dziękujemy, {{name}}. Skontaktujemy się z Tobą na adres {{email}}."
+		}
+	},
+	"about": {
+		"title": "O nas",
+		"description": "Menedżer Kontaktów to lekka i bezpieczna aplikacja internetowa zaprojektowana do obsługi zgłoszeń kontaktowych. Początkowo opracowana jako projekt edukacyjny z naciskiem na czystą architekturę backendu, aplikacja przekształciła się w gotowy szablon dla małych formularzy z dostępem administracyjnym.",
+		"techStack": "Ten projekt jest zbudowany przy użyciu Node.js, Express, MongoDB i EJS, z myślą o prostocie, przejrzystości i przyjazności dla programistów.",
+		"openSource": "Zapraszamy do korzystania i współpracy – ten projekt jest open-source i stworzony z ❤️ przez programistów, którym zależy na czystym, łatwym w utrzymaniu kodzie.",
+		"credits": "Opracowane przez Miłosza G. i ChatGPT jako część praktycznej nauki i podróży w kierunku rozwoju fullstack."
+	},
+	"login": {
+		"title": "Zaloguj się do konta administratora",
+		"button": "Zaloguj",
+		"logoutMessage": "Zostałeś wylogowany"
+	},
+	"admin": {
+		"title": "Panel administracyjny",
+		"table": {
+			"name": "Imię i nazwisko",
+			"email": "Email",
+			"actions": "Akcje"
+		},
+		"actions": {
+			"edit": "Edytuj",
+			"delete": "Usuń"
+		},
+		"editContact": {
+			"title": "Edytuj kontakt",
+			"success": "Kontakt został zaktualizowany"
+		},
+		"deleteConfirm": "Czy na pewno?"
+	},
+	"error": {
+		"title": "{{status}} - Błąd",
+		"notFound": "Strona nie znaleziona",
+		"default": "Coś poszło nie tak"
+	},
+	"validation": {
+		"nameRequired": "Imię i nazwisko jest wymagane",
+		"emailRequired": "Wymagany jest prawidłowy adres email"
+	},
+	"common.appName": "common.appName",
+	"common.navigation.home": "common.navigation.home",
+	"common.navigation.about": "common.navigation.about",
+	"common.navigation.adminPanel": "common.navigation.adminPanel",
+	"common.theme.toggle": "common.theme.toggle",
+	"home.welcome.title": "home.welcome.title",
+	"home.welcome.description": "home.welcome.description",
+	"home.contact.title": "home.contact.title",
+	"common.form.name": "common.form.name",
+	"common.form.email": "common.form.email",
+	"common.buttons.send": "common.buttons.send",
+	"about.title": "about.title",
+	"about.description": "about.description",
+	"about.techStack": "about.techStack",
+	"about.openSource": "about.openSource",
+	"about.credits": "about.credits",
+	"common.buttons.back": "common.buttons.back",
+	"login.title": "login.title",
+	"common.form.username": "common.form.username",
+	"common.form.password": "common.form.password",
+	"login.button": "login.button"
+}
