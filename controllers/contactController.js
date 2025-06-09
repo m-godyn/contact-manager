@@ -57,10 +57,24 @@ async function updateContact(id, { name, email }) {
     }
 }
 
-async function getAllContacts() {
+async function getAllContacts(page = 1, limit = 10) {
     try {
-        const contacts = await Contact.find({}).sort({ createdAt: -1 });
-        return { success: true, contacts };
+        const skip = (page - 1) * limit;
+        const [contacts, total] = await Promise.all([
+            Contact.find({}).sort({ createdAt: -1 }).skip(skip).limit(limit),
+            Contact.countDocuments({})
+        ]);
+        
+        return {
+            success: true,
+            contacts,
+            pagination: {
+                total,
+                page,
+                limit,
+                totalPages: Math.ceil(total / limit)
+            }
+        };
     } catch (error) {
         console.error('Error fetching contacts:', error);
         return { 

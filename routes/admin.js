@@ -12,11 +12,17 @@ const requireLogin = require('../middlewares/auth');
 router.use(requireLogin);
 
 router.get('/admin', async (req, res) => {
-    const result = await getAllContacts();
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const result = await getAllContacts(page, limit);
     if (!result.success) {
         return res.status(500).send('Error loading contacts');
     }
-    res.render('admin', { title: 'Admin Panel', contacts: result.contacts });
+    res.render('admin', { 
+        title: 'Admin Panel', 
+        contacts: result.contacts,
+        pagination: result.pagination
+    });
 });
 
 router.get('/admin/delete/:id', async (req, res) => {

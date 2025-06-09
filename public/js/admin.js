@@ -5,7 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const editForm = document.getElementById('editContactForm');
     const saveButton = document.getElementById('saveContactBtn');
     const alertBox = document.getElementById('editAlertBox');
+    const pageSizeSelect = document.getElementById('pageSize');
     let currentContactId = null;
+
+    // Handle page size change
+    if (pageSizeSelect) {
+        pageSizeSelect.addEventListener('change', () => {
+            const url = new URL(window.location.href);
+            url.searchParams.set('limit', pageSizeSelect.value);
+            url.searchParams.set('page', 1);
+            window.location.href = url.toString();
+        });
+    }
 
     function showAlert(message, type = 'danger') {
         alertBox.className = `alert alert-${type}`;
