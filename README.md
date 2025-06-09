@@ -4,6 +4,7 @@ A simple Node.js + Express app for collecting and managing contact form submissi
 
 Built a learning project with backend-first principles.
 
+![a screenshot presenting home page](./contact-manager.png)
 
 ## 🚀 Features
 
