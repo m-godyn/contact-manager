@@ -2,7 +2,7 @@
 
 A simple Node.js + Express app for collecting and managing contact form submissions. Built using EJS, MongoDB, and a minimal frontend with Bootstrap.
 
-Built a learning project with backend-first principles.
+Built as a learning project with backend-first principles, this application was created to explore the fundamentals of Express.js and to experiment with AI-assisted development workflows using Cursor as an intelligent coding companion.
 
 ![a screenshot presenting home page](./contact-manager.png)
 
