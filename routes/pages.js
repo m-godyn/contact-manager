@@ -38,8 +38,8 @@ router.post(
     '/contact', 
     contactLimiter,
     [
-        body('name').notEmpty().withMessage('Name is required'),
-        body('email').isEmail().withMessage('Valid email is required'),
+        body('name').notEmpty().withMessage((value, { req }) => req.__('validation.nameRequired')),
+        body('email').isEmail().withMessage((value, { req }) => req.__('validation.emailRequired')),
     ],
     async (req, res) => {
         const errors = validationResult(req);
@@ -58,7 +58,7 @@ router.post(
 
         res.json({
             success: true,
-            message: `Thank you, ${name}. We'll contact you at ${email}.`
+            message: req.__('home.contact.success', { name, email })
         });
     }
 );

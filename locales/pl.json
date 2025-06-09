@@ -9,7 +9,7 @@
 		"navigation": {
 			"home": "Strona główna",
 			"about": "O nas",
-			"adminPanel": "Panel administracyjny"
+			"adminPanel": "Panel Admina"
 		},
 		"buttons": {
 			"send": "Wyślij",
@@ -19,7 +19,7 @@
 			"logout": "Wyloguj"
 		},
 		"form": {
-			"name": "Imię i nazwisko",
+			"name": "Imię",
 			"email": "Email",
 			"username": "Nazwa użytkownika",
 			"password": "Hasło"
@@ -35,26 +35,27 @@
 			"description": "Nowoczesny i efektywny sposób zarządzania kontaktami. Trzymaj wszystkie ważne połączenia w jednym miejscu."
 		},
 		"contact": {
-			"title": "Kontakt",
-			"success": "Dziękujemy, {{name}}. Skontaktujemy się z Tobą na adres {{email}}."
+			"title": "Skontaktuj się z nami",
+			"success": "Dziękujemy, {{name}}. Skontaktujemy się z Tobą pod adresem {{email}}."
 		}
 	},
 	"about": {
 		"title": "O nas",
-		"description": "Menedżer Kontaktów to lekka i bezpieczna aplikacja internetowa zaprojektowana do obsługi zgłoszeń kontaktowych. Początkowo opracowana jako projekt edukacyjny z naciskiem na czystą architekturę backendu, aplikacja przekształciła się w gotowy szablon dla małych formularzy z dostępem administracyjnym.",
-		"techStack": "Ten projekt jest zbudowany przy użyciu Node.js, Express, MongoDB i EJS, z myślą o prostocie, przejrzystości i przyjazności dla programistów.",
-		"openSource": "Zapraszamy do korzystania i współpracy – ten projekt jest open-source i stworzony z ❤️ przez programistów, którym zależy na czystym, łatwym w utrzymaniu kodzie.",
-		"credits": "Opracowane przez Miłosza G. i ChatGPT jako część praktycznej nauki i podróży w kierunku rozwoju fullstack."
+		"description": "Menedżer Kontaktów to lekka i bezpieczna aplikacja webowa do zarządzania zapytaniami kontaktowymi. Początkowo opracowana jako projekt edukacyjny z naciskiem na czystą architekturę backendową, aplikacja ewoluowała w reużywalny szablon dla małych formularzy z dostępem administracyjnym.",
+		"techStack": "Ten projekt został zbudowany przy użyciu Node.js, Express, MongoDB i EJS, z naciskiem na prostotę, przejrzystość i przyjazność dla programistów.",
+		"openSource": "Zapraszamy do korzystania lub współtworzenia – ten projekt jest open-source i został zbudowany z ❤️ przez programistów, którym zależy na czystym, łatwym w utrzymaniu kodzie.",
+		"credits": "Opracowane przez Miłosza G. i ChatGPT jako część praktycznej podróży edukacyjnej i rozwoju fullstack."
 	},
 	"login": {
 		"title": "Zaloguj się do konta administratora",
 		"button": "Zaloguj",
-		"logoutMessage": "Zostałeś wylogowany"
+		"logoutMessage": "Zostałeś wylogowany",
+		"invalidCredentials": "Nieprawidłowa nazwa użytkownika lub hasło"
 	},
 	"admin": {
-		"title": "Panel administracyjny",
+		"title": "Panel Administratora",
 		"table": {
-			"name": "Imię i nazwisko",
+			"name": "Imię",
 			"email": "Email",
 			"actions": "Akcje"
 		},
@@ -64,7 +65,7 @@
 		},
 		"editContact": {
 			"title": "Edytuj kontakt",
-			"success": "Kontakt został zaktualizowany"
+			"success": "Kontakt zaktualizowany pomyślnie"
 		},
 		"deleteConfirm": "Czy na pewno?"
 	},
@@ -72,11 +73,18 @@
 		"title": "{{status}} - Błąd",
 		"notFound": "Strona nie znaleziona",
 		"default": "Coś poszło nie tak",
-		"rateLimit": "Zbyt wiele żądań z tego adresu IP, spróbuj ponownie za minutę"
+		"rateLimit": "Zbyt wiele prób z tego adresu IP, spróbuj ponownie za minutę",
+		"duplicateEmail": "Ten adres email jest już zarejestrowany w naszym systemie",
+		"saveContact": "Wystąpił błąd podczas zapisywania kontaktu",
+		"updateContact": "Wystąpił błąd podczas aktualizacji kontaktu",
+		"fetchContacts": "Wystąpił błąd podczas pobierania kontaktów",
+		"fetchContact": "Wystąpił błąd podczas pobierania kontaktu",
+		"deleteContact": "Wystąpił błąd podczas usuwania kontaktu",
+		"contactNotFound": "Kontakt nie znaleziony"
 	},
 	"validation": {
-		"nameRequired": "Imię i nazwisko jest wymagane",
-		"emailRequired": "Wymagany jest prawidłowy adres email"
+		"nameRequired": "Imię jest wymagane",
+		"emailRequired": "Prawidłowy adres email jest wymagany"
 	},
 	"common.appName": "common.appName",
 	"common.navigation.home": "common.navigation.home",

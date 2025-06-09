@@ -49,7 +49,8 @@
     "login": {
         "title": "Melden Sie sich in Ihrem Admin-Konto an",
         "button": "Anmelden",
-        "logoutMessage": "Sie wurden abgemeldet"
+        "logoutMessage": "Sie wurden abgemeldet",
+        "invalidCredentials": "Benutzername oder Passwort ist falsch"
     },
     "admin": {
         "title": "Admin-Bereich",
@@ -72,7 +73,14 @@
         "title": "{{status}} - Fehler",
         "notFound": "Seite nicht gefunden",
         "default": "Etwas ist schiefgelaufen",
-        "rateLimit": "Zu viele Anfragen von dieser IP, bitte versuchen Sie es in einer Minute erneut"
+        "rateLimit": "Zu viele Anfragen von dieser IP, bitte versuchen Sie es in einer Minute erneut",
+        "duplicateEmail": "Diese E-Mail-Adresse ist bereits in unserem System registriert",
+        "saveContact": "Beim Speichern des Kontakts ist ein Fehler aufgetreten",
+        "updateContact": "Beim Aktualisieren des Kontakts ist ein Fehler aufgetreten",
+        "fetchContacts": "Beim Abrufen der Kontakte ist ein Fehler aufgetreten",
+        "fetchContact": "Beim Abrufen des Kontakts ist ein Fehler aufgetreten",
+        "deleteContact": "Beim Löschen des Kontakts ist ein Fehler aufgetreten",
+        "contactNotFound": "Kontakt nicht gefunden"
     },
     "validation": {
         "nameRequired": "Name ist erforderlich",

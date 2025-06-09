@@ -14,7 +14,7 @@
         "buttons": {
             "send": "Send",
             "close": "Close",
-            "save": "Save changes",
+            "save": "Save Changes",
             "back": "Back to Home",
             "logout": "Logout"
         },
@@ -41,15 +41,16 @@
     },
     "about": {
         "title": "About Us",
-        "description": "Contact Manager is a lightweight and secure web application designed for handling contact submissions. Originally developed as a learning project with a focus on clean backend architecture, the app has grown into a reusable boilerplate for small-scale forms with admin access.",
-        "techStack": "This project is built using Node.js, Express, MongoDB, and EJS, with simplicity, transparency, and developer-friendliness in mind.",
-        "openSource": "Feel free to use or contribute – this project is open-source and made with ❤️ by developers who care about clean, maintainable code.",
-        "credits": "Developed by Miłosz G. and ChatGPT as part of a hands-on learning & fullstack growth journey."
+        "description": "Contact Manager is a lightweight and secure web application for managing contact requests. Originally developed as a learning project with a focus on clean backend architecture, the app has evolved into a reusable template for small-scale forms with admin access.",
+        "techStack": "This project was built with Node.js, Express, MongoDB, and EJS, emphasizing simplicity, transparency, and developer-friendliness.",
+        "openSource": "Feel free to use or contribute – this project is open-source and built with ❤️ by developers who care about clean, maintainable code.",
+        "credits": "Developed by Miłosz G. and ChatGPT as part of a practical learning and fullstack development journey."
     },
     "login": {
         "title": "Log in to your admin account",
         "button": "Login",
-        "logoutMessage": "You have been logged out"
+        "logoutMessage": "You have been logged out",
+        "invalidCredentials": "Username or password is incorrect"
     },
     "admin": {
         "title": "Admin Panel",
@@ -72,7 +73,14 @@
         "title": "{{status}} - Error",
         "notFound": "Page not found",
         "default": "Something went wrong",
-        "rateLimit": "Too many requests from this IP, please try again after a minute"
+        "rateLimit": "Too many requests from this IP, please try again after a minute",
+        "duplicateEmail": "This email is already registered in our system",
+        "saveContact": "An error occurred while saving the contact",
+        "updateContact": "An error occurred while updating the contact",
+        "fetchContacts": "An error occurred while fetching contacts",
+        "fetchContact": "An error occurred while fetching the contact",
+        "deleteContact": "An error occurred while deleting the contact",
+        "contactNotFound": "Contact not found"
     },
     "validation": {
         "nameRequired": "Name is required",

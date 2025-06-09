@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.reset();
             } else {
                 alertBox.className = 'alert alert-danger';
-                alertBox.textContent = data.message || 'An error occurred';
+                alertBox.textContent = data.message || document.querySelector('meta[name="error-message"]').content;
                 alertBox.classList.remove('d-none');
             }
         } catch (error) {
             alertBox.className = 'alert alert-danger';
-            alertBox.textContent = 'An error occurred while submitting the form';
+            alertBox.textContent = document.querySelector('meta[name="error-message"]').content;
             alertBox.classList.remove('d-none');
         }
     });

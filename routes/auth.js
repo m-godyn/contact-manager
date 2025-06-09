@@ -16,7 +16,11 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ username });
 
     if (!user || !(await bcrypt.compare(password, user.password))) {
-        return res.render('login', { title: 'Login', error: 'Username or password is incorrect', logoutMessage: null });
+        return res.render('login', { 
+            title: 'Login', 
+            error: req.__('login.invalidCredentials'), 
+            logoutMessage: null 
+        });
     }
 
     req.session.userId = user._id;

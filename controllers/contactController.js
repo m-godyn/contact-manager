@@ -13,12 +13,12 @@ async function saveContact({ name, email }) {
             console.log(`⚠️ Duplicate email attempt: ${email}`);
             return { 
                 success: false, 
-                message: 'This email is already registered in our system.' 
+                message: req.__('error.duplicateEmail') 
             };
         }
         return { 
             success: false, 
-            message: 'An error occurred while saving the contact.' 
+            message: req.__('error.saveContact') 
         };
     }
 }
@@ -30,7 +30,7 @@ async function updateContact(id, { name, email }) {
         if (existingContact) {
             return {
                 success: false,
-                message: 'This email is already registered in our system.'
+                message: req.__('error.duplicateEmail')
             };
         }
 
@@ -43,7 +43,7 @@ async function updateContact(id, { name, email }) {
         if (!contact) {
             return { 
                 success: false, 
-                message: 'Contact not found' 
+                message: req.__('error.contactNotFound') 
             };
         }
         
@@ -52,7 +52,7 @@ async function updateContact(id, { name, email }) {
         console.error('Error updating contact:', error);
         return { 
             success: false, 
-            message: 'An error occurred while updating the contact.' 
+            message: req.__('error.updateContact') 
         };
     }
 }
@@ -79,7 +79,7 @@ async function getAllContacts(page = 1, limit = 10) {
         console.error('Error fetching contacts:', error);
         return { 
             success: false, 
-            message: 'An error occurred while fetching contacts.' 
+            message: req.__('error.fetchContacts') 
         };
     }
 }
@@ -90,7 +90,7 @@ async function getContactById(id) {
         if (!contact) {
             return { 
                 success: false, 
-                message: 'Contact not found' 
+                message: req.__('error.contactNotFound') 
             };
         }
         return { success: true, contact };
@@ -98,7 +98,7 @@ async function getContactById(id) {
         console.error('Error fetching contact:', error);
         return { 
             success: false, 
-            message: 'An error occurred while fetching the contact.' 
+            message: req.__('error.fetchContact') 
         };
     }
 }
@@ -109,7 +109,7 @@ async function deleteContact(id) {
         if (!contact) {
             return { 
                 success: false, 
-                message: 'Contact not found' 
+                message: req.__('error.contactNotFound') 
             };
         }
         return { success: true };
@@ -117,7 +117,7 @@ async function deleteContact(id) {
         console.error('Error deleting contact:', error);
         return { 
             success: false, 
-            message: 'An error occurred while deleting the contact.' 
+            message: req.__('error.deleteContact') 
         };
     }
 }

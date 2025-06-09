@@ -15,7 +15,7 @@
             "send": "Send",
             "close": "Luk",
             "save": "Gem ændringer",
-            "back": "Tilbage til Hjem",
+            "back": "Tilbage til hjem",
             "logout": "Log ud"
         },
         "form": {
@@ -32,24 +32,25 @@
     "home": {
         "welcome": {
             "title": "Velkommen til Kontakt Manager!",
-            "description": "En moderne og effektiv måde at administrere dine kontakter. Hold styr på dine vigtige forbindelser ét sted."
+            "description": "En moderne og effektiv måde at administrere dine kontakter på. Hold styr på dine vigtige forbindelser ét sted."
         },
         "contact": {
             "title": "Kontakt os",
-            "success": "Tak, {{name}}. Vi kontakter dig på {{email}}."
+            "success": "Tak, {{name}}. Vi vil kontakte dig på {{email}}."
         }
     },
     "about": {
         "title": "Om os",
-        "description": "Kontakt Manager er en let og sikker webapplikation designet til at håndtere kontaktindsendelser. Oprindeligt udviklet som et læringsprojekt med fokus på ren backend-arkitektur, er appen vokset til en genbrugelig skabelon til småskala formularer med admin-adgang.",
+        "description": "Kontakt Manager er en let og sikker webapplikation til håndtering af kontaktanmodninger. Oprindeligt udviklet som et læringsprojekt med fokus på ren backend-arkitektur, er appen udviklet til en genbrugelig skabelon til små formularer med admin-adgang.",
         "techStack": "Dette projekt er bygget med Node.js, Express, MongoDB og EJS, med fokus på enkelhed, gennemsigtighed og udviklervenlighed.",
-        "openSource": "Du er velkommen til at bruge eller bidrage – dette projekt er open-source og lavet med ❤️ af udviklere, der går op i ren, vedligeholdbar kode.",
-        "credits": "Udviklet af Miłosz G. og ChatGPT som del af en praktisk lærings- og fullstack udviklingsrejse."
+        "openSource": "Du er velkommen til at bruge eller bidrage – dette projekt er open-source og bygget med ❤️ af udviklere, der går op i ren, vedligeholdbar kode.",
+        "credits": "Udviklet af Miłosz G. og ChatGPT som en del af en praktisk lærings- og fullstack-udviklingsrejse."
     },
     "login": {
         "title": "Log ind på din admin-konto",
         "button": "Log ind",
-        "logoutMessage": "Du er blevet logget ud"
+        "logoutMessage": "Du er blevet logget ud",
+        "invalidCredentials": "Brugernavn eller adgangskode er forkert"
     },
     "admin": {
         "title": "Admin Panel",
@@ -72,7 +73,14 @@
         "title": "{{status}} - Fejl",
         "notFound": "Siden blev ikke fundet",
         "default": "Noget gik galt",
-        "rateLimit": "For mange anmodninger fra denne IP, prøv igen om et minut"
+        "rateLimit": "For mange anmodninger fra denne IP, prøv igen om et minut",
+        "duplicateEmail": "Denne e-mail er allerede registreret i vores system",
+        "saveContact": "Der opstod en fejl under gem af kontakten",
+        "updateContact": "Der opstod en fejl under opdatering af kontakten",
+        "fetchContacts": "Der opstod en fejl under hentning af kontakter",
+        "fetchContact": "Der opstod en fejl under hentning af kontakten",
+        "deleteContact": "Der opstod en fejl under sletning af kontakten",
+        "contactNotFound": "Kontakt ikke fundet"
     },
     "validation": {
         "nameRequired": "Navn er påkrævet",
