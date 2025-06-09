@@ -1,3 +1,29 @@
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0">
+                    <%= __("footer.copyright", { year: new Date().getFullYear() }) %>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">
+                    <%= __("footer.creator") %>
+                        <a href="https://github.com/m-godyn" target="_blank" rel="noopener noreferrer"
+                            class="text-decoration-none">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        |
+                        <a href="https://milgodyn.dev" target="_blank" rel="noopener noreferrer"
+                            class="text-decoration-none">
+                            <i class="bi bi-globe"></i>
+                            <%= __("footer.website") %>
+                        </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

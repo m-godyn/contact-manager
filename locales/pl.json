@@ -44,7 +44,7 @@
 		"description": "Menedżer Kontaktów to lekka i bezpieczna aplikacja webowa do zarządzania zapytaniami kontaktowymi. Początkowo opracowana jako projekt edukacyjny z naciskiem na czystą architekturę backendową, aplikacja ewoluowała w reużywalny szablon dla małych formularzy z dostępem administracyjnym.",
 		"techStack": "Ten projekt został zbudowany przy użyciu Node.js, Express, MongoDB i EJS, z naciskiem na prostotę, przejrzystość i przyjazność dla programistów.",
 		"openSource": "Zapraszamy do korzystania lub współtworzenia – ten projekt jest open-source i został zbudowany z ❤️ przez programistów, którym zależy na czystym, łatwym w utrzymaniu kodzie.",
-		"credits": "Opracowane przez Miłosza G. i ChatGPT jako część praktycznej podróży edukacyjnej i rozwoju fullstack."
+		"credits": "Opracowane przez Miłosza G. zasilanego przez AI jako część praktycznej podróży edukacyjnej i rozwoju fullstack."
 	},
 	"login": {
 		"title": "Zaloguj się do konta administratora",
@@ -67,7 +67,8 @@
 			"title": "Edytuj kontakt",
 			"success": "Kontakt zaktualizowany pomyślnie"
 		},
-		"deleteConfirm": "Czy na pewno?"
+		"deleteConfirm": "Czy na pewno?",
+		"recordsPerPage": "Rekordów na stronę"
 	},
 	"error": {
 		"title": "{{status}} - Błąd",
@@ -87,25 +88,9 @@
 		"nameRequired": "Imię jest wymagane",
 		"emailRequired": "Prawidłowy adres email jest wymagany"
 	},
-	"common.appName": "common.appName",
-	"common.navigation.home": "common.navigation.home",
-	"common.navigation.about": "common.navigation.about",
-	"common.navigation.adminPanel": "common.navigation.adminPanel",
-	"common.theme.toggle": "common.theme.toggle",
-	"home.welcome.title": "home.welcome.title",
-	"home.welcome.description": "home.welcome.description",
-	"home.contact.title": "home.contact.title",
-	"common.form.name": "common.form.name",
-	"common.form.email": "common.form.email",
-	"common.buttons.send": "common.buttons.send",
-	"about.title": "about.title",
-	"about.description": "about.description",
-	"about.techStack": "about.techStack",
-	"about.openSource": "about.openSource",
-	"about.credits": "about.credits",
-	"common.buttons.back": "common.buttons.back",
-	"login.title": "login.title",
-	"common.form.username": "common.form.username",
-	"common.form.password": "common.form.password",
-	"login.button": "login.button"
+	"footer": {
+		"copyright": "© {{year}} Menedżer Kontaktów",
+		"creator": "Stworzone przez MG",
+		"website": "Strona"
+	}
 }

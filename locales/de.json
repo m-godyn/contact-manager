@@ -44,7 +44,7 @@
         "description": "Kontakt Manager ist eine leichte und sichere Webanwendung zur Verwaltung von Kontaktanfragen. Ursprünglich als Lernprojekt mit Fokus auf saubere Backend-Architektur entwickelt, hat sich die App zu einer wiederverwendbaren Vorlage für Formulare im kleinen Maßstab mit Admin-Zugang entwickelt.",
         "techStack": "Dieses Projekt wurde mit Node.js, Express, MongoDB und EJS entwickelt, wobei Einfachheit, Transparenz und Entwicklerfreundlichkeit im Vordergrund stehen.",
         "openSource": "Fühlen Sie sich frei, es zu nutzen oder beizutragen – dieses Projekt ist Open-Source und wurde mit ❤️ von Entwicklern erstellt, denen sauberer, wartbarer Code am Herzen liegt.",
-        "credits": "Entwickelt von Miłosz G. und ChatGPT als Teil einer praktischen Lern- und Fullstack-Entwicklungsreise."
+        "credits": "Entwickelt von Miłosz G. unterstützt durch KI als Teil einer praktischen Lern- und Fullstack-Entwicklungsreise."
     },
     "login": {
         "title": "Melden Sie sich in Ihrem Admin-Konto an",
@@ -67,7 +67,8 @@
             "title": "Kontakt bearbeiten",
             "success": "Kontakt erfolgreich aktualisiert"
         },
-        "deleteConfirm": "Sind Sie sicher?"
+        "deleteConfirm": "Sind Sie sicher?",
+        "recordsPerPage": "Einträge pro Seite"
     },
     "error": {
         "title": "{{status}} - Fehler",
@@ -86,5 +87,10 @@
     "validation": {
         "nameRequired": "Name ist erforderlich",
         "emailRequired": "Gültige E-Mail-Adresse ist erforderlich"
+    },
+    "footer": {
+        "copyright": "© {{year}} Kontakt Manager",
+        "creator": "Erstellt von MG",
+        "website": "Webseite"
     }
 } 

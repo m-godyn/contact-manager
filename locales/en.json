@@ -44,7 +44,7 @@
         "description": "Contact Manager is a lightweight and secure web application for managing contact requests. Originally developed as a learning project with a focus on clean backend architecture, the app has evolved into a reusable template for small-scale forms with admin access.",
         "techStack": "This project was built with Node.js, Express, MongoDB, and EJS, emphasizing simplicity, transparency, and developer-friendliness.",
         "openSource": "Feel free to use or contribute – this project is open-source and built with ❤️ by developers who care about clean, maintainable code.",
-        "credits": "Developed by Miłosz G. and ChatGPT as part of a practical learning and fullstack development journey."
+        "credits": "Developed by Miłosz G. powered by AI as part of a practical learning and fullstack development journey."
     },
     "login": {
         "title": "Log in to your admin account",
@@ -67,7 +67,8 @@
             "title": "Edit Contact",
             "success": "Contact updated successfully"
         },
-        "deleteConfirm": "Are you sure?"
+        "deleteConfirm": "Are you sure?",
+        "recordsPerPage": "Records per page"
     },
     "error": {
         "title": "{{status}} - Error",
@@ -86,5 +87,10 @@
     "validation": {
         "nameRequired": "Name is required",
         "emailRequired": "Valid email is required"
+    },
+    "footer": {
+        "copyright": "© {{year}} Contact Manager",
+        "creator": "Created by MG",
+        "website": "Website"
     }
 }

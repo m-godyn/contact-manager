@@ -44,7 +44,7 @@
         "description": "Kontakt Manager er en let og sikker webapplikation til håndtering af kontaktanmodninger. Oprindeligt udviklet som et læringsprojekt med fokus på ren backend-arkitektur, er appen udviklet til en genbrugelig skabelon til små formularer med admin-adgang.",
         "techStack": "Dette projekt er bygget med Node.js, Express, MongoDB og EJS, med fokus på enkelhed, gennemsigtighed og udviklervenlighed.",
         "openSource": "Du er velkommen til at bruge eller bidrage – dette projekt er open-source og bygget med ❤️ af udviklere, der går op i ren, vedligeholdbar kode.",
-        "credits": "Udviklet af Miłosz G. og ChatGPT som en del af en praktisk lærings- og fullstack-udviklingsrejse."
+        "credits": "Udviklet af Miłosz G. drevet af AI som en del af en praktisk lærings- og fullstack-udviklingsrejse."
     },
     "login": {
         "title": "Log ind på din admin-konto",
@@ -67,7 +67,8 @@
             "title": "Rediger kontakt",
             "success": "Kontakt opdateret med succes"
         },
-        "deleteConfirm": "Er du sikker?"
+        "deleteConfirm": "Er du sikker?",
+        "recordsPerPage": "Poster pr. side"
     },
     "error": {
         "title": "{{status}} - Fejl",
@@ -86,5 +87,10 @@
     "validation": {
         "nameRequired": "Navn er påkrævet",
         "emailRequired": "Gyldig e-mail er påkrævet"
+    },
+    "footer": {
+        "copyright": "© {{year}} Kontakt Manager",
+        "creator": "Skabt af MG",
+        "website": "Hjemmeside"
     }
 } 
