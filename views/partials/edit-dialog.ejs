@@ -11,6 +11,7 @@
             <div class="modal-body">
                 <div id="editAlertBox" class="alert d-none" role="alert"></div>
                 <form id="editContactForm">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                     <div class="mb-3">
                         <label class="form-label">
                             <%= __("common.form.name") %>

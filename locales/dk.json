@@ -80,7 +80,8 @@
         "fetchContacts": "Der opstod en fejl under hentning af kontakter",
         "fetchContact": "Der opstod en fejl under hentning af kontakten",
         "deleteContact": "Der opstod en fejl under sletning af kontakten",
-        "contactNotFound": "Kontakt ikke fundet"
+        "contactNotFound": "Kontakt ikke fundet",
+        "loginRateLimit": "For mange login-forsøg, prøv igen efter 5 minutter"
     },
     "validation": {
         "nameRequired": "Navn er påkrævet",

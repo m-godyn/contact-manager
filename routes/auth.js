@@ -3,6 +3,20 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const requireLogin = require('../middlewares/auth');
+const rateLimit = require('express-rate-limit');
+
+const loginLimiter = rateLimit({
+    windowMs: 5 * 60 * 1000, // 5 minutes
+    max: 5, // limit each IP to 5 requests per windowMs
+    message: 'Too many login attempts, please try again after 5 minutes',
+    standardHeaders: true,
+    legacyHeaders: false,
+    handler: (req, res) => {
+        res.status(429).json({
+            message: req.__('error.loginRateLimit')
+        });
+    }
+});
 
 router.get('/login', (req, res) => {
     if (req.session && req.session.userId) {
@@ -11,7 +25,7 @@ router.get('/login', (req, res) => {
     res.render('login', { title: 'Login', error: null, logoutMessage: null });
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', loginLimiter, async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
 

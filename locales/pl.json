@@ -80,7 +80,8 @@
 		"fetchContacts": "Wystąpił błąd podczas pobierania kontaktów",
 		"fetchContact": "Wystąpił błąd podczas pobierania kontaktu",
 		"deleteContact": "Wystąpił błąd podczas usuwania kontaktu",
-		"contactNotFound": "Kontakt nie znaleziony"
+		"contactNotFound": "Kontakt nie znaleziony",
+		"loginRateLimit": "Zbyt wiele prób logowania, spróbuj ponownie za 5 minut"
 	},
 	"validation": {
 		"nameRequired": "Imię jest wymagane",

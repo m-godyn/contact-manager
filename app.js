@@ -10,6 +10,8 @@ const createAdminIfNotExists = require('./utils/createAdmin');
 const session = require('express-session');
 const i18n = require('i18n');
 const cookieParser = require('cookie-parser');
+const helmet = require('helmet');
+const csrf = require('csurf');
 require('dotenv').config();
 
 i18n.configure({
@@ -23,6 +25,23 @@ i18n.configure({
 });
 
 const app = express();
+
+// Security middleware
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net"],
+            styleSrc: ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net"],
+            imgSrc: ["'self'", "data:", "cdn.jsdelivr.net"],
+            fontSrc: ["'self'", "cdn.jsdelivr.net"],
+            connectSrc: ["'self'"]
+        }
+    },
+    crossOriginEmbedderPolicy: false, // Required for Bootstrap Icons
+    crossOriginResourcePolicy: { policy: "cross-origin" } // Required for Bootstrap Icons
+}));
+
 app.set('trust proxy', 1); // Trust first proxy (needed for rate limiting to work with X-Forwarded-For)
 const PORT = process.env.PORT || 3000;
 connectDB();
@@ -40,7 +59,39 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    cookie: {
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
 }));
+
+// CSRF Protection - only for authenticated routes
+const csrfProtection = csrf({ cookie: true });
+
+// Apply CSRF protection only to admin routes
+app.use('/admin', csrfProtection);
+
+// CSRF Error Handler
+app.use((err, req, res, next) => {
+    if (err.code === 'EBADCSRFTOKEN') {
+        // Handle CSRF token errors
+        if (req.headers['accept']?.includes('json')) {
+            return res.status(403).json({ error: 'Invalid CSRF token' });
+        }
+        return res.status(403).render('error', {
+            message: 'Invalid CSRF token',
+            status: 403,
+            title: '403 - Forbidden'
+        });
+    }
+    next(err);
+});
+
+// Make CSRF token available to all views (it will be undefined for non-CSRF routes)
+app.use((req, res, next) => {
+    res.locals.csrfToken = req.csrfToken ? req.csrfToken() : null;
+    next();
+});
 
 app.use(routes);
 app.use(langRoutes);

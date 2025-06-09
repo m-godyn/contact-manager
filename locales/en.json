@@ -80,7 +80,8 @@
         "fetchContacts": "An error occurred while fetching contacts",
         "fetchContact": "An error occurred while fetching the contact",
         "deleteContact": "An error occurred while deleting the contact",
-        "contactNotFound": "Contact not found"
+        "contactNotFound": "Contact not found",
+        "loginRateLimit": "Too many login attempts, please try again after 5 minutes"
     },
     "validation": {
         "nameRequired": "Name is required",

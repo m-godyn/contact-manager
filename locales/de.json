@@ -80,7 +80,8 @@
         "fetchContacts": "Beim Abrufen der Kontakte ist ein Fehler aufgetreten",
         "fetchContact": "Beim Abrufen des Kontakts ist ein Fehler aufgetreten",
         "deleteContact": "Beim Löschen des Kontakts ist ein Fehler aufgetreten",
-        "contactNotFound": "Kontakt nicht gefunden"
+        "contactNotFound": "Kontakt nicht gefunden",
+        "loginRateLimit": "Zu viele Anmeldeversuche, bitte versuchen Sie es in 5 Minuten erneut"
     },
     "validation": {
         "nameRequired": "Name ist erforderlich",

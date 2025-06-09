@@ -63,9 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     saveButton.addEventListener('click', async () => {
         const formData = new FormData(editForm);
+        const csrfToken = formData.get('_csrf');
         const data = {
             name: formData.get('name'),
-            email: formData.get('email')
+            email: formData.get('email'),
+            _csrf: csrfToken
         };
 
         try {
@@ -73,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    'Accept': 'application/json',
+                    'CSRF-Token': csrfToken
                 },
                 body: JSON.stringify(data)
             });
